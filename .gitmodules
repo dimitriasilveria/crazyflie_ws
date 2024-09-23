@@ -1,0 +1,12 @@
+[submodule "crazy_encirclement"]
+	path = crazy_encirclement
+	url = git@github.com:dimitriasilveria/crazy_encirclement.git
+[submodule "controller_pkg"]
+	path = controller_pkg
+	url = git@github.com:dimitriasilveria/crazy_tests.git
+[submodule "crazyswarm2"]
+	path = crazyswarm2
+	url = git@github.com:dimitriasilveria/crazyswarm.git
+[submodule "motion_capture_tracking"]
+	path = motion_capture_tracking
+	url = https://github.com/IMRCLab/motion_capture_tracking.git
