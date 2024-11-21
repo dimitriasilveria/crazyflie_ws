@@ -10,3 +10,6 @@
 [submodule "motion_capture_tracking"]
 	path = motion_capture_tracking
 	url = https://github.com/IMRCLab/motion_capture_tracking.git
+[submodule "target_tracking"]
+	path = target_tracking
+	url = git@github.com:dimitriasilveria/target_following.git
