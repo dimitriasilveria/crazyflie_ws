@@ -14,6 +14,7 @@
 ## Running all the launch files and nodes
 * If you haven't add the source commands to your .bash.rc, don't forget to run 
 ```source /opt/ros/humble/setup.bash && source ~/ros2_ws/install/local_setup.bash``` in all the terminal that you use for the steps in this section
+
 1- Open a terminal and run the command ```source ~/crazyflies_env/bin/activate``` to activate the virtual environment.
   
 2- On the previous terminal, run the [encirclement_launch.py](crazy_encirclement/launch/encirclement_launch.py) file:
