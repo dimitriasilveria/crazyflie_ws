@@ -3,20 +3,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 plt.rcParams['text.usetex'] = True
 import os
+import pickle
 # plt.rcParams['text.latex.preamble'] = r'\usepackage{amsmath}'
 from mpl_toolkits.mplot3d import Axes3D
 
-desired_pose_1 = pd.read_csv('desired_pose_1.csv').to_numpy()
-desired_pose_2 = pd.read_csv('desired_pose_2.csv').to_numpy()
-desired_pose_3 = pd.read_csv('desired_pose_3.csv').to_numpy()
-actual_pose_1 = pd.read_csv('actual_pose_1.csv').to_numpy()
-actual_pose_2 = pd.read_csv('actual_pose_2.csv').to_numpy()
-actual_pose_3 = pd.read_csv('actual_pose_3.csv').to_numpy()
+desired_pose_1 = pd.read_csv('data/desired_pose_1.csv').to_numpy()
+desired_pose_2 = pd.read_csv('data/desired_pose_2.csv').to_numpy()
+desired_pose_3 = pd.read_csv('data/desired_pose_3.csv').to_numpy()
+actual_pose_1 = pd.read_csv('data/actual_pose_1.csv').to_numpy()
+actual_pose_2 = pd.read_csv('data/actual_pose_2.csv').to_numpy()
+actual_pose_3 = pd.read_csv('data/actual_pose_3.csv').to_numpy()
 beg = 20
 end = 800
-phi_1= pd.read_csv('phi_1.csv').to_numpy()[:,1].reshape(-1,1)
-phi_2= pd.read_csv('phi_2.csv').to_numpy()[:,1].reshape(-1,1)
-phi_3= pd.read_csv('phi_3.csv').to_numpy()[:,1].reshape(-1,1)
+phi_1= pd.read_csv('data/phi_1.csv').to_numpy()[:,1].reshape(-1,1)
+phi_2= pd.read_csv('data/phi_2.csv').to_numpy()[:,1].reshape(-1,1)
+phi_3= pd.read_csv('data/phi_3.csv').to_numpy()[:,1].reshape(-1,1)
 min = np.min([phi_1.shape[0],phi_2.shape[0],phi_3.shape[0]])
 phi_1 = phi_1[0:min,:]
 phi_2 = phi_2[0:min,:]
@@ -110,3 +111,6 @@ plt.title('Distances between Agents')
 plt.savefig(f"{figures_dir}/real_distance_agents.png", bbox_inches='tight', pad_inches=0.1)
 plt.close()
 plt.show()
+
+with open ('diffs.pkl','wb') as f:
+    pickle.dump(phi_diff,f)
