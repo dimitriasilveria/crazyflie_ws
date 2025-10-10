@@ -16,3 +16,6 @@
 [submodule "crazy_demo"]
 	path = crazy_demo
 	url = git@github.com:dimitriasilveria/crazy_demo.git
+[submodule "actions_demo_interfaces"]
+	path = actions_demo_interfaces
+	url = git@github.com:dimitriasilveria/actions_demo_interfaces.git
