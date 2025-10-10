@@ -13,3 +13,6 @@
 [submodule "target_tracking"]
 	path = target_tracking
 	url = git@github.com:dimitriasilveria/target_following.git
+[submodule "crazy_demo"]
+	path = crazy_demo
+	url = git@github.com:dimitriasilveria/crazy_demo.git
