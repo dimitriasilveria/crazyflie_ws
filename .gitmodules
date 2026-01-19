@@ -19,3 +19,6 @@
 [submodule "actions_demo_interfaces"]
 	path = actions_demo_interfaces
 	url = git@github.com:dimitriasilveria/actions_demo_interfaces.git
+[submodule "crazy_encirclement_interfaces"]
+	path = crazy_encirclement_interfaces
+	url = git@github.com:paaraujo/crazy_encirclement_interfaces.git
