@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from icecream import ic
 
-bag = nml_bag.Reader('/home/bitdrones/bags/rosbag2_2025_03_04-16_20_39_success', storage_id='sqlite3')
+bag = nml_bag.Reader('/home/bitdrones/bags_filter/baselines/modelA/rosbag2_2025_11_20-17_44_22/', storage_id='sqlite3')
 sufix = "video"
 actual_pose_1 = pd.DataFrame(columns=[ 'x', 'y', 'z'])
 actual_pose_2 = pd.DataFrame(columns=[ 'x', 'y', 'z'])
@@ -16,6 +16,12 @@ phi_1 = pd.DataFrame(columns=['phi_1'])
 phi_2 = pd.DataFrame(columns=['phi_2'])
 phi_3 = pd.DataFrame(columns=['phi_3'])
 data_folder = "/home/bitdrones/ros2_ws/src/data/"
+
+for message in bag:
+    if message['topic'] == '/encircle':
+        print(message)
+
+input('Press Enter to continue...')
 #finding what drone was agent 1, 2 and 3
 for message in bag:
     if message['topic'] == '/agents_order':
