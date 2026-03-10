@@ -16,3 +16,6 @@
 [submodule "crazy_encirclement_interfaces"]
 	path = crazy_encirclement_interfaces
 	url = git@github.com:paaraujo/crazy_encirclement_interfaces.git
+[submodule "target_following"]
+	path = target_following
+	url = git@github.com:dimitriasilveria/target_following.git
