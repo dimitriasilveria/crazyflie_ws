@@ -19,3 +19,6 @@
 [submodule "target_following"]
 	path = target_following
 	url = git@github.com:dimitriasilveria/target_following.git
+[submodule "lie_group_swarm"]
+	path = lie_group_swarm
+	url = git@github.com:QUARRG/lie_group_swarm.git
