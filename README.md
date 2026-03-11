@@ -32,5 +32,5 @@ This repository is a third-party ROS 2 package that can receive data from variou
 
 ## target_following
 
-This packages is a Reinforcement Larning swarm control for Crazyflies to execute a target following task. The swarm achieves collision-free coordination and cooperation using local observations. For more details, go to the repository to see the documentation, or read the paper published at the IEEE International Symposium on Systems Engineering: [Scalable Swarm Control Using Deep Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/11014655)
+This packages is a Reinforcement Larning swarm control for Crazyflies to execute a target following task. The swarm achieves collision-free coordination and cooperation using local observations. For more details, go to the repository to see the documentation, or read the paper published at the IEEE Systems Conference: [Scalable Swarm Control Using Deep Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/11014655)
 
