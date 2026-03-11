@@ -3,7 +3,7 @@
 	url = git@github.com:dimitriasilveria/crazy_encirclement.git
 [submodule "controller_pkg"]
 	path = controller_pkg
-	url = git@github.com:dimitriasilveria/crazy_tests.git
+	url = git@github.com:dimitriasilveria/controller_pkg.git
 [submodule "crazyswarm2"]
 	path = crazyswarm2
 	url = git@github.com:dimitriasilveria/crazyswarm2.git
