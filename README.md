@@ -1,45 +1,36 @@
 # Crazyflies workspace 
 
-## The first thing to do is to select the crazyflies you intend to fly in the configuration file:
-1. Go to the file [crazyflie.yaml](crazyswarm2/crazyflie/config/crazyflies.yaml) 
-2. Under the drone's name, set the flag "enable"
-3. Open a terminal, go to the src folder of your workspace:
+This repository contains all ROS 2 packages in the source workspace to run all experiments with [Crazyflies](https://www.bitcraze.io/products/crazyflie-2-1-plus/) that were conducted during my Master's of Applied Sciences degree.
 
-    ```cd ~/ros2_ws/src```
+## controller_pkg
+This package contains auxiliary nodes to that publish flags that control the experiments, i.e., landing the drones, pausing experiments...
 
-3. Run the command, to build the crazyflie package : 
+## crazy_encirclement
+This package is a private repository containing codes that are still under development as part of my Ph.D. (follow me to see the next updates 👀)
 
-    ```colcon build --packages-select crazyflie```
+## crazy_encirclement_interfaces
+This is also a private repository containing codes that are still under development as part of my Ph.D.
 
-## Running all the launch files and nodes
-* If you haven't add the source commands to your .bash.rc, don't forget to run 
-```source /opt/ros/humble/setup.bash && source ~/ros2_ws/install/local_setup.bash``` in all the terminal that you use for the steps in this section
+## crazyswarm2
+A third-party ROS 2-based stack for Bitcraze Crazyflie multirotor robots.
 
-1- Open a terminal and run the command ```source ~/crazyflies_env/bin/activate``` to activate the virtual environment.
-  
-2- On the previous terminal, run the [encirclement_launch.py](crazy_encirclement/launch/encirclement_launch.py) file:
+## lie_group_swarm
 
-``` ros2 launch crazy_encirclement encirclement_launch.py```
+This package is decentralized swarm algorithm in which quadcopters are coordinated to follow 3D periodic curves in a collision-free manner, using Lie group operations. For more details, go to the repository to see the documentation, or read the paper published at the IEEE Robotics and Automation Letters: [Decentralized Swarm Control Via SO(3) Embeddings for 3D Trajectories](https://ieeexplore.ieee.org/abstract/document/11260939)
 
-* This launch runs the motion capture, the watch dog, the crazy server and the agents order node. 
+## motion_capture_tracking
 
-3 - For safety, first open a terminal and run the node that sends a landing command to all the drones:
-```ros2 run controller_pkg landing``
+This repository is a third-party ROS 2 package that can receive data from various motion capture systems:
 
-* To send the landing command, click on the terminal where this node is runnig and press ```Enter``` 
+- VICON
+- Qualisys
+- OptiTrack
+- VRPN
+- NOKOV
+- FZMotion
+- Motion Analysis
 
-4- Now, the nodes that send the commands to the drones has to be run. For that, open one terminal for each drone you want to fly, and run: 
+## target_following
 
-``` ros2 run crazy_encirclement circle_distortion --ros-args -p robot:="C05" --remap __node:=distortion_05```
-
-* The argument "robot" must the the name of the robot you want to fly, and you also must substitute "distortion_05" for "distortion" + <number of drone>.
-
-5- After running one node for each drone, they will NOT take off. You have to click on the terminal where each node is running and press ```Enter```
-
-6- After all of them take off, in another terminal, run the the node that sends the drone a flag to start the trajectory:
-
-```ros2 run controller_pkg encircling```
-* Click on the terminal where this node is running and press ```Enter``` to start the encirclement.
-
-**If anything goes wrong, click on the terminal where the landing node is running and press enter.**
+This packages is a Reinforcement Larning swarm control for Crazyflies to execute a target following task. The swarm achieves collision-free coordination and cooperation using local observations. For more details, go to the repository to see the documentation, or read the paper published at the IEEE International Symposium on Systems Engineering: [Scalable Swarm Control Using Deep Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/11014655)
 
