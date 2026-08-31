@@ -22,3 +22,6 @@
 [submodule "lie_group_swarm"]
 	path = lie_group_swarm
 	url = git@github.com:QUARRG/lie_group_swarm.git
+[submodule "target_protection"]
+	path = target_protection
+	url = git@github.com:QUARRG/target_protection.git
