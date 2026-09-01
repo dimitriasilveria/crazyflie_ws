@@ -25,3 +25,6 @@
 [submodule "target_protection"]
 	path = target_protection
 	url = git@github.com:QUARRG/target_protection.git
+[submodule "CrazySim"]
+	path = CrazySim
+	url = git@github.com:dimitriasilveria/CrazySim.git
